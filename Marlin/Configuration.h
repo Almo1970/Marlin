@@ -1190,11 +1190,12 @@
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
+ * angepasst von  Alex 19.01.2022
  */
 #if WITH_TMC && WITH_BMG
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 830 }
 #elif WITH_TMC && WITH_TITAN
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 764 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 810 }
 #elif WITH_TMC && !WITH_TITAN && !WITH_BMG
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 186 }
 #elif WITH_TITAN && !WITH_TMC
@@ -1473,7 +1474,7 @@
 #ifdef XY2_MODELS
 #define NOZZLE_TO_PROBE_OFFSET { -50, -10, 0 }
 #else
-#define NOZZLE_TO_PROBE_OFFSET { -35, -0, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -35, -10, 0 }
 #endif
 
 // Most probes should stay away from the edges of the bed, but
